@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2); */
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+/* css for container and container-fluid*/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+/* css for container and container-fluid ends*/
+
+/* css for nav bar*/
+
+.nav-brand {
+  font-family: "Yellowtail", cursive;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.nav-link a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: #204051;
+}
+@keyframes move {
+  0% {
+    border: 2px solid #7f09e0;
+    padding: 1.2rem;
+    width: 2px;
+  }
+  25% {
+    border-bottom: 2px solid #f5b4c6;
+    width: 50%;
+  }
+  50% {
+    border-bottom: 2px solid #b5f145;
+    width: 75%;
+  }
+  100% {
+    border-bottom: 2px solid #caa426;
+    width: 100%;
+  }
+}
+.nav-link a:hover {
+  animation: move 5s ease-in-out;
+  color: #f54291;
+}
+.nav-link a:active {
+  color: #e3e3e4;
+  margin-bottom: 2px;
+  border-bottom: 2px solid #c70039;
+}
+.line-2 {
+  margin: 5px;
+  width: 15px;
+  height: 3px;
+  background-color: rgb(22, 19, 228);
+}
+.line-1,
+.line-3 {
+  margin: 5px;
+  width: 20px;
+  height: 3px;
+  background-color: brown;
+}
+/* media query for smaller screens */
+@media (max-width: 581px) {
+  .toggler {
+    visibility: visible;
+    margin-right: 5.9rem;
+  }
+  .nav-items {
+    visibility: hidden;
+  }
+  .illustration {
+    visibility: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 582px) {
+  .toggler {
+    visibility: visible;
+    margin-right: 3.9rem;
+  }
+  .nav-items {
+    visibility: hidden;
+  }
+  .illustration {
+    visibility: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .hero-body {
+    background-image: url("/assets/puzzle.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10rem 0 0 5rem;
+  }
+  .hero {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .toggler {
+    visibility: hidden;
+  }
+  .illustration {
+    max-width: 100%;
+    height: auto;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+/* css for nav bar ends*/
+
+/* css for hero section */
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+.hero-body {
+  display: flex;
+  width: 90vw;
+  overflow-x: hidden;
+}
+.hero-texts {
+  margin: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  padding: 2.5rem;
+}
+
+.illustration {
+  background-image: url("/assets/puzzle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+}
+
+.header {
+  font-size: 2.2rem;
+  font-family: "Raleway", sans-serif;
+  color: #45046a;
+}
+
+/* css for hero section ends */
+
+/* css for services */
+/* .services-wrapper {
+  display: grid;
+  margin: 4.8rem;
+  padding: 2.4rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 2fr);
+} */
+@media (max-width: 581px) {
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0.8rem;
+    padding: 2.4rem;
+  }
+  .card {
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 582px) {
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4.8rem;
+    padding: 1.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .services-wrapper {
+    display: grid;
+    margin: 4.8rem;
+    padding: 2.4rem;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+    gap: 2.5rem;
+  }
+  .card {
+    padding: 1.3rem;
+  }
+}
+/* css for services ends */
