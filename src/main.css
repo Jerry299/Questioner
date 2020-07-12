@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 /* --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -62,7 +63,11 @@ body {
 
 .nav-brand {
   font-family: "Yellowtail", cursive;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
+  background: linear-gradient(to right, hsl(0 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 40%;
 }
 
 .navbar {
@@ -80,7 +85,7 @@ body {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
-  color: #204051;
+  color: #f34141;
 }
 /* @keyframes move {
   0% {
@@ -164,19 +169,37 @@ a:active {
     align-items: center;
     position: relative;
   }
-  .singIn-icon {
-    position: absolute;
-    top: 2.8rem;
-    left: 17.6rem;
-  }
+
   .singIn-icon i {
-    color: #e4e3e3;
+    visibility: hidden;
   }
   .meet-desc:nth-child(1) {
     line-height: 1.9rem;
   }
   .meet-desc:nth-child(1) {
     padding: 0 1.3rem;
+  }
+  .footer-wrapper {
+    background-color: #303960;
+    color: #ecf3e7;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.1rem;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyrights {
+    text-align: center;
   }
 }
 @media only screen and (max-width: 991px) and (min-width: 582px) {
@@ -214,6 +237,43 @@ a:active {
   .card {
     margin: 1.4rem;
     padding: 1.2rem;
+  }
+  .meet-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .meet-right {
+    display: flex;
+    margin-top: 0.9rem;
+    justify-content: space-around;
+    width: 18.3rem;
+  }
+  .singIn-icon i {
+    visibility: hidden;
+  }
+  .footer-wrapper {
+    background-color: #303960;
+    color: #ecf3e7;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyrights {
+    text-align: center;
   }
 }
 
@@ -259,6 +319,31 @@ a:active {
   .meet-right {
     width: 30%;
   }
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 50px 40px 60px 40px 60px;
+    background-color: #303960;
+    color: #c7e2b2;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.1rem;
+  }
+  .footer-contact {
+    grid-column: 2/3;
+  }
+  .social-links {
+    grid-column: 6/7;
+  }
+  .social-links .links {
+    display: flex;
+    justify-content: space-between;
+  }
+  .copyrights {
+    grid-row: 5/6;
+    grid-column: 3/6;
+    align-self: end;
+    justify-self: center;
+  }
 }
 /* media queries ends */
 
@@ -288,7 +373,6 @@ a:active {
   background-image: url("/assets/puzzle.png");
   background-position: center;
   background-repeat: no-repeat;
-  padding: 4rem 2rem;
 }
 
 .header {
@@ -350,12 +434,13 @@ i {
   margin-bottom: 1.3rem;
 }
 .meet-desc {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
 }
 .meet-wrapper {
-  background-color: #1f4068;
-  color: #fff;
+  background-color: #2c2eac;
+  color: rgb(242, 242, 242);
+  padding-bottom: 1.7rem;
 }
 
 /* css for meetup ends */
@@ -392,3 +477,9 @@ button:focus {
   transition: all ease 0.3s;
 }
 /* css for buttons ends  */
+
+/* footer css */
+.footer-wrapper {
+  width: 100%;
+  /* background-color: #303960; */
+}
