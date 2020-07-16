@@ -25,14 +25,14 @@
           <!-- <div class="nav-link">
             <a href="">About</a>
           </div> -->
-          <div class="nav-link">
-            <p href="">Meet-Ups</p>
+          <div class="nav-link" style="margin-top: 1.18rem;">
+            <a href="/src/meetup.html">Meet-Ups</a>
           </div>
           <div class="nav-link" id="log-In">
-            <p href="">Log In</p>
+            <p>Log In</p>
           </div>
-          <div class="nav-link">
-            <p href="">Sign Up</p>
+          <div class="nav-link" id="signUp">
+            <p>Sign Up</p>
           </div>
         </div>
         <div class="toggler">
@@ -77,17 +77,67 @@
             <div class="form-body">
               <div class="form-group">
                 <label for="email">Email: </label>
-                <input type="text" name="email" id="login-name" />
+                <input
+                  type="text"
+                  name="email"
+                  id="login-name"
+                  placeholder="Enter Email here..."
+                />
+                <small class="login-Err">Err Mes</small>
               </div>
               <div class="form-group">
                 <label for="email">Password: </label>
-                <input type="password" name="password" id="login-password" />
+                <input
+                  type="password"
+                  name="password"
+                  id="login-password"
+                  placeholder="Enter Password here...."
+                />
+                <small class="login-Err">Err Mes</small>
               </div>
               <button id="submit-btn" class="btn">Log In</button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- sign up modal starts here -->
+      <div class="signup-modal" id="signup-modal">
+        <div class="container cover">
+          <div class="form">
+            <span id="closebtn2">&times;</span>
+            <h2 class="form-header" style="text-align: center; color: #c70039;">
+              Sign Up
+            </h2>
+            <div class="form-body">
+              <div class="form-group">
+                <label for="email">Name: </label>
+                <input type="text" name="name" id="signup-name" />
+                <small class="signUp-Err">Err Mes</small>
+              </div>
+              <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="signup-email" />
+                <small class="signUp-Err">Err Mes</small>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Password: </label>
+                <input type="password" name="password" id="signup-password" />
+                <small class="signUp-Err">Err Mes</small>
+              </div>
+              <div class="form-group">
+                <label for="email">Re-enter Password: </label>
+                <input type="password" name="password2" id="signup-password2" />
+                <small class="signUp-Err">Err Mes</small>
+              </div>
+              <button id="submit-btn" class="btn">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sign up modal ends here -->
       <!-- modal ends here -->
 
       <section id="services">

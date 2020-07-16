@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questioner</title>
+    <link rel="stylesheet" href="meetup.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="container-fluid">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <a href="/src/index.html">
+            QUESTIONER
+          </a>
+        </div>
+      </nav>
+      <div id="meetings">
+        <!-- navbar ends -->
+        <h1 id="meetup-header">UpComing Events And Questions</h1>
+        <!-- section for meetups -->
+        <section class="info-card" style="border-radius: 5%;">
+          <div class="card-header">
+            Event Name: <span id="event">Angular Catch Up</span>
+          </div>
+          <hr style="border: 3px solid #fff; border-radius: 5px;" />
+          <div class="card-body">
+            <div class="meeting-time">Time: <span id="time">10:73</span></div>
+            <div class="meeting-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo eos
+              debitis dolorem cum et dolorum, temporibus deleniti esse omnis
+              consectetur iste aliquam. Veniam voluptate molestiae commodi
+              exercitationem consequuntur doloremque neque?
+            </div>
+            <div class="meeting-venue">
+              Venue: <span id="venue"> 23 , negghsgkkd</span>
+            </div>
+          </div>
+          <div class="questions">
+            <h3 class="ques-header">Questions</h3>
+            <div class="prevQuestions">
+              <div class="pques">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione debitis aut a optio consectetur iusto deleniti, atque
+                recusandae, porro nam, unde aliquid nihil culpa nulla libero
+                exercitationem! Cum, labore eligendi.
+              </div>
+
+              <div class="votes">
+                <div class="upvotes">
+                  <i class="fa fa-thumbs-up" aria-hidden="true"></i
+                  ><span> 10</span>
+                </div>
+                <div class="downvotes">
+                  <i class="fa fa-thumbs-down" aria-hidden="true"></i
+                  ><span> 37</span>
+                </div>
+              </div>
+            </div>
+            <div class="newQuestion">
+              <h3 class="ques-header">Ask A Question</h3>
+              <textarea
+                name="question"
+                id="ask-question"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+        <section
+          class="card container"
+          style="border-radius: 5%; margin-bottom: 2rem;"
+        >
+          <div class="card-header">Event Name: Angular Catch Up</div>
+          <div class="card-body">
+            <div class="meeting-time">Time: 10:73</div>
+            <div class="meeting-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo eos
+              debitis dolorem cum et dolorum, temporibus deleniti esse omnis
+              consectetur iste aliquam. Veniam voluptate molestiae commodi
+              exercitationem consequuntur doloremque neque?
+            </div>
+            <div class="meeting-venue">23 , negghsgkkd</div>
+            <div class="votes">
+              <div class="upvotes">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i
+                ><span> 10</span>
+              </div>
+              <div class="downvotes">
+                <i class="fa fa-thumbs-down" aria-hidden="true"></i
+                ><span> 37</span>
+              </div>
+            </div>
+          </div>
+          <div class="questions">
+            <h3>Questions</h3>
+            <div class="prevQuestions">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+              debitis aut a optio consectetur iusto deleniti, atque recusandae,
+              porro nam, unde aliquid nihil culpa nulla libero exercitationem!
+              Cum, labore eligendi.
+            </div>
+            <div class="newQuestion">
+              <h3>Ask A Question</h3>
+              <textarea
+                name="question"
+                id="ask-questions"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
