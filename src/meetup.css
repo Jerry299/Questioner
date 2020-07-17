@@ -15,7 +15,7 @@
        font-family: "Poppins", sans-serif; */
 
 .info-card {
-  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+  background: linear-gradient(-45deg, #5c258d, #4389a2);
   color: #fff;
   padding: 2rem;
 
@@ -39,7 +39,7 @@
   text-align: center;
 }
 .meeting-body {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .meeting-time {
   text-align: center;
@@ -70,7 +70,7 @@
 }
 .votes {
   display: flex;
-  float: right;
+
   width: 10%;
   justify-content: space-around;
 }
@@ -78,15 +78,44 @@
   font-size: 1.4rem;
   font-family: "Noto Sans JP", sans-serif;
   text-align: center;
-  margin: 1.3rem 0px;
+  margin-top: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+.newQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #ask-question {
   max-width: 100%;
   width: 500px;
-  display: flex;
-  justify-content: end;
+  resize: none;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  margin: 1.2rem 0px;
 }
-
+#comment-btn {
+  color: #e2ece7 !important;
+  text-transform: uppercase;
+  background: #070101;
+  padding: 20px;
+  border: 4px solid #20bf6b !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+#comment-btn:hover {
+  cursor: pointer;
+  color: #af4b4b !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+}
+.pques,
+.votes {
+  font-family: "Raleway", sans-serif;
+}
 /* media queries */
 @media (max-width: 581px) {
   #meetup-header {
@@ -94,6 +123,14 @@
   }
   .info-card {
     margin: 1.7rem;
+  }
+  .votes {
+    margin-left: 5rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
   }
 }
 
@@ -112,6 +149,20 @@
     background-color: #092532;
     padding: 1.3rem;
   }
+  .votes {
+    margin-left: 9rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+  }
+  .pques {
+    width: 50%;
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 7rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -128,6 +179,21 @@
     margin: 1.5rem 17rem;
     background-color: #092532;
     padding: 1.3rem;
+  }
+  .votes {
+    margin-left: 29rem;
+    margin-top: 1.7rem;
+    margin-bottom: 0.7rem;
+    width: 40%;
+  }
+  .pques {
+    width: 50%;
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 10rem;
+  }
+  .info-card {
+    margin-bottom: 2rem;
   }
 }
 /* media queries ends */

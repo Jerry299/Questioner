@@ -257,9 +257,7 @@ body {
     justify-content: space-around;
     width: 18.3rem;
   }
-  .singIn-icon i {
-    visibility: hidden;
-  }
+
   .footer-wrapper {
     background-color: #303960;
     color: #ecf3e7;
@@ -496,9 +494,13 @@ i {
   text-align: center;
   letter-spacing: 0.1rem;
 }
-
-button:hover,
 button:focus {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  outline: none;
+}
+button:hover {
   outline: none;
   box-shadow: -1px -1px 20px 3px #1f1b13;
   color: #0a223d;
@@ -529,13 +531,42 @@ button:focus {
   width: 60%;
   margin: 1.5rem 0rem;
 }
-#submit-btn {
+/* #submit-btn {
   padding: 1rem 2rem;
   color: #fff;
   border: 0;
   border-radius: 10px;
   width: 30%;
   margin-top: 1.5rem;
+  cursor: pointer;
+
+  border: none;
+
+  box-shadow: 0 9px #999;
+} */
+#submit-btn,
+#submit-btn2 {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.9rem;
+  width: 30%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1.3rem;
+}
+#submit-btn:hover,
+#submit-btn2:hover {
+  background-color: #3e8e41;
+}
+#submit-btn:active,
+#submit-btn2:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .modal,
 .signup-modal {
@@ -547,7 +578,7 @@ button:focus {
   right: 0;
   height: 100%;
   width: 100%;
-
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -598,6 +629,10 @@ input[type="password"] {
 /* err messages on login and signup */
 
 ::placeholder {
-  color: rgba(4, 13, 19, 0.8);
+  color: rgba(192, 209, 221, 0.8);
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
+
+/* adding responsiveness */

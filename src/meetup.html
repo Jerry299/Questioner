@@ -31,9 +31,11 @@
           <div class="card-header">
             Event Name: <span id="event">Angular Catch Up</span>
           </div>
-          <hr style="border: 3px solid #fff; border-radius: 5px;" />
+          <hr
+            style="border: 3px solid rgb(233, 153, 153); border-radius: 5px;"
+          />
           <div class="card-body">
-            <div class="meeting-time">Time: <span id="time">10:73</span></div>
+            <div class="meeting-time">DATE: <span id="time">10:73</span></div>
             <div class="meeting-body">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo eos
               debitis dolorem cum et dolorum, temporibus deleniti esse omnis
@@ -41,7 +43,7 @@
               exercitationem consequuntur doloremque neque?
             </div>
             <div class="meeting-venue">
-              Venue: <span id="venue"> 23 , negghsgkkd</span>
+              Venue: <span id="venue"> 23,negghsgkkd</span>
             </div>
           </div>
           <div class="questions">
@@ -53,36 +55,48 @@
                 recusandae, porro nam, unde aliquid nihil culpa nulla libero
                 exercitationem! Cum, labore eligendi.
               </div>
-
+              <div id="people-comments"></div>
               <div class="votes">
                 <div class="upvotes">
-                  <i class="fa fa-thumbs-up" aria-hidden="true"></i
-                  ><span> 10</span>
+                  <i
+                    class="fa fa-thumbs-up"
+                    aria-hidden="true"
+                    style="color: rgb(88, 189, 88);"
+                  ></i
+                  ><span id="up-count"> 10</span>
                 </div>
                 <div class="downvotes">
-                  <i class="fa fa-thumbs-down" aria-hidden="true"></i
-                  ><span> 37</span>
+                  <i
+                    class="fa fa-thumbs-down"
+                    aria-hidden="true"
+                    style="color: rgb(211, 98, 98);"
+                  ></i
+                  ><span id="down-count"> 37</span>
                 </div>
               </div>
             </div>
+            <hr style="border: 1px solid #fff; border-radius: 5px;" />
+            <h3 class="ques-header">Comment</h3>
+
             <div class="newQuestion">
-              <h3 class="ques-header">Ask A Question</h3>
               <textarea
+                placeholder="Add A Comment......"
                 name="question"
                 id="ask-question"
                 cols="30"
-                rows="10"
+                rows="5"
               ></textarea>
+              <button id="comment-btn">Comment</button>
             </div>
           </div>
         </section>
-        <section
+        <!-- <section
           class="card container"
           style="border-radius: 5%; margin-bottom: 2rem;"
         >
           <div class="card-header">Event Name: Angular Catch Up</div>
           <div class="card-body">
-            <div class="meeting-time">Time: 10:73</div>
+            <div class="meeting-time">DATE: 10:73</div>
             <div class="meeting-body">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo eos
               debitis dolorem cum et dolorum, temporibus deleniti esse omnis
@@ -110,7 +124,7 @@
               Cum, labore eligendi.
             </div>
             <div class="newQuestion">
-              <h3>Ask A Question</h3>
+              <h3>Comment</h3>
               <textarea
                 name="question"
                 id="ask-questions"
@@ -119,7 +133,7 @@
               ></textarea>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
     </div>
   </body>
