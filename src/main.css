@@ -67,11 +67,7 @@ body {
   justify-content: space-between;
   padding: 1.2rem;
 }
-.nav-items {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-}
+
 .nav-link p,
 .nav-link a {
   text-decoration: none;
@@ -135,7 +131,7 @@ body {
 @media (max-width: 581px) {
   .toggler {
     visibility: visible;
-    margin-right: 5.9rem;
+    margin-right: 2.9rem;
   }
   .nav-items {
     visibility: hidden;
@@ -172,7 +168,9 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
+  .navbar {
+    height: 10vh;
+  }
   .meet-desc:nth-child(1) {
     line-height: 1.9rem;
   }
@@ -207,6 +205,26 @@ body {
 
     padding: 1.3rem;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
+  }
+  /* toggler effects for navbar */
+
+  .navItems-active {
+    /* position: absolute;
+    top: 8vh;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 200px; */
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
   }
 }
 @media only screen and (max-width: 991px) and (min-width: 582px) {
@@ -305,12 +323,17 @@ body {
     -webkit-text-fill-color: transparent;
     width: 40%;
   }
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
   body {
     overflow-x: hidden;
   }
   .hero {
     width: 100%;
-    height: 80vh;
+    height: calc(80vh - 50px);
   }
   .services-wrapper {
     display: grid;
