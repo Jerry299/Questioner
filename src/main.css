@@ -133,12 +133,74 @@ body {
     visibility: visible;
     margin-right: 2.9rem;
   }
-  .nav-items {
+  /* .nav-items {
     visibility: hidden;
+  } */
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    border-radius: 0 70px 20px 0;
+    transform: translateX(150%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-link a,
+  .nav-link p {
+    display: block;
+    width: 99%;
+    text-align: center;
+    height: 3rem;
+    color: rgb(192, 209, 221);
+  }
+  .nav-link:nth-child(1) {
+    margin-top: 3rem;
+  }
+  .nav-link:hover {
+    background-color: red;
+    border: 1px solid #fff;
+  }
+  .nav-active {
+    transform: translate(0%);
+  }
+  @keyframes navMeetup {
+    from {
+      opacity: 0;
+      transform: translate(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+  @keyframes navFade {
+    from {
+      opacity: 0;
+      transform: translate(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+  .burger-rotate .line-1 {
+    transform: rotate(45deg) translate(-5px, 6px);
+  }
+  .burger-rotate .line-2 {
+    display: none;
+  }
+  .burger-rotate .line-3 {
+    transform: rotate(-45deg) translate(-5px, -6px);
   }
   .illustration {
     visibility: hidden;
   }
+
   body {
     overflow-x: hidden;
   }
@@ -207,25 +269,6 @@ body {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
   }
   /* toggler effects for navbar */
-
-  .navItems-active {
-    /* position: absolute;
-    top: 8vh;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin-bottom: 200px; */
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-  }
 }
 @media only screen and (max-width: 991px) and (min-width: 582px) {
   .toggler {
@@ -235,6 +278,9 @@ body {
   .nav-items {
     visibility: hidden;
   }
+  /* .nav-link:nth-child(1) {
+    margin-top: 1.18rem;
+  } */
   .illustration {
     visibility: hidden;
   }
@@ -328,6 +374,9 @@ body {
     justify-content: space-around;
     width: 50%;
   }
+  /* .nav-link:nth-child(1) {
+    margin-top: 1.18rem;
+  } */
   body {
     overflow-x: hidden;
   }
