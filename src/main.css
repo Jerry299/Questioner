@@ -132,6 +132,7 @@ body {
   .toggler {
     visibility: visible;
     margin-right: 2.9rem;
+    transition: all 0.5s ease;
   }
   /* .nav-items {
     visibility: hidden;
@@ -139,8 +140,8 @@ body {
   .nav-items {
     display: flex;
     flex-direction: column;
-
-    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    background-color: rgb(5, 6, 24);
     position: fixed;
     top: 0;
     left: 0;
@@ -162,11 +163,10 @@ body {
     margin-top: 3rem;
   }
   .nav-link:hover {
-    background-color: red;
-    border: 1px solid #fff;
   }
   .nav-active {
     transform: translate(0%);
+    z-index: 5;
   }
   @keyframes navMeetup {
     from {
@@ -189,13 +189,13 @@ body {
     }
   }
   .burger-rotate .line-1 {
-    transform: rotate(45deg) translate(-5px, 6px);
+    transform: rotate(45deg) translate(1px, 2px);
   }
   .burger-rotate .line-2 {
     display: none;
   }
   .burger-rotate .line-3 {
-    transform: rotate(-45deg) translate(-5px, -6px);
+    transform: rotate(-45deg) translate(2px, -3px);
   }
   .illustration {
     visibility: hidden;
@@ -264,25 +264,116 @@ body {
   .cover {
     background-color: #f4f4f4;
     margin: 15% auto;
-
+    border-radius: 30px;
     padding: 1.3rem;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
   }
-  /* toggler effects for navbar */
+  #ask {
+    position: relative;
+    top: 50px;
+    left: 60px;
+  }
+  #closebtn,
+  #closebtn2 {
+    color: rgb(248, 24, 24);
+    float: right;
+    font-size: 1.7rem;
+  }
 }
 @media only screen and (max-width: 991px) and (min-width: 582px) {
   .toggler {
     visibility: visible;
-    margin-right: 3.9rem;
+    margin-right: 2.9rem;
+    transition: all 0.5s ease;
   }
-  .nav-items {
+  /* .nav-items {
     visibility: hidden;
+  } */
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    border-radius: 0 120px 200px 0;
+    transform: translateX(150%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-link a,
+  .nav-link p {
+    display: block;
+    width: 99%;
+    text-align: center;
+    height: 3rem;
+    color: rgb(192, 209, 221);
+  }
+  .nav-link:nth-child(1) {
+    margin-top: 3rem;
+  }
+  .nav-link:hover {
+    background-color: red;
+    border: 1px solid #fff;
+  }
+  .nav-active {
+    transform: translate(0%);
+    z-index: 5;
+  }
+  @keyframes navMeetup {
+    from {
+      opacity: 0;
+      transform: translate(100px);
+      z-index: 5;
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+      z-index: 5;
+    }
+  }
+  @keyframes navFade {
+    from {
+      opacity: 0;
+      transform: translate(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+  .burger-rotate .line-1 {
+    transform: rotate(45deg) translate(1px, 2px);
+  }
+  .burger-rotate .line-2 {
+    display: none;
+  }
+  .burger-rotate .line-3 {
+    transform: rotate(-45deg) translate(2px, -3px);
   }
   /* .nav-link:nth-child(1) {
     margin-top: 1.18rem;
   } */
   .illustration {
     visibility: hidden;
+  }
+  .nav-brand {
+    font-family: "Yellowtail", cursive;
+    font-size: 1.9rem;
+    background: linear-gradient(to right, hsl(0 100% 62%), hsl(204 100% 59%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .navbar {
+    height: 10vh;
+  }
+  #ask {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    bottom: 30px;
   }
   body {
     overflow-x: hidden;
@@ -296,6 +387,9 @@ body {
   }
   .hero {
     width: 100%;
+  }
+  .hero-texts {
+    background-color: #fff;
   }
   .services-wrapper {
     display: flex;
@@ -321,7 +415,12 @@ body {
     justify-content: space-around;
     width: 18.3rem;
   }
-
+  #closebtn,
+  #closebtn2 {
+    color: rgb(248, 24, 24);
+    float: right;
+    font-size: 1.7rem;
+  }
   .footer-wrapper {
     background-color: #303960;
     color: #ecf3e7;
@@ -349,6 +448,7 @@ body {
     margin: 15% auto;
     width: 80%;
     padding: 1.3rem;
+    border-radius: 30px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
   }
 }
@@ -360,6 +460,8 @@ body {
   .illustration {
     max-width: 100%;
     height: auto;
+    flex: 0 0 auto;
+    width: 50%;
   }
   .nav-brand {
     font-family: "Yellowtail", cursive;
@@ -441,7 +543,22 @@ body {
     margin: 10% auto;
     width: 40%;
     padding: 1.3rem;
+    border-radius: 30px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
+  }
+  #closebtn,
+  #closebtn2 {
+    color: #ccc;
+    float: right;
+    font-size: 1.3rem;
+  }
+  #closebtn,
+  #closebtn2:hover,
+  #closebtn,
+  #closebtn2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 /* media queries ends */
@@ -452,6 +569,13 @@ body {
 
 @media (min-width: 768px) {
   .col-md-6 {
+    flex: 0 0 auto;
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-7 {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -466,6 +590,10 @@ body {
   margin: 1.4rem;
   font-family: "Roboto", sans-serif;
   padding: 2.5rem;
+  max-width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  width: 70%;
 }
 
 .illustration {
@@ -644,7 +772,7 @@ button:hover {
 .signup-modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   right: 0;
@@ -654,20 +782,6 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#closebtn,
-#closebtn2 {
-  color: #ccc;
-  float: right;
-  font-size: 1.3rem;
-}
-#closebtn,
-#closebtn2:hover,
-#closebtn,
-#closebtn2:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 input[type="text"] {
   padding: 12px 20px;
   margin: 8px 0;
