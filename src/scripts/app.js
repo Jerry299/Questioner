@@ -70,14 +70,30 @@ const validateSignup = () => {
     const password = signupPassword.value.trim();
     const password2 = signupPassword2.value.trim();
 
+    // display error text
+    const displayError = (element, message, cls) => {
+      const parentElem = element.parentElement;
+      const small = parentElem.querySelector("small");
+      small.innerText = message;
+      small.classList.add(cls);
+    };
+
     // start checks
     if (nameRegex.test(name)) {
       signupName.classList.remove("error");
       signupName.classList.add("success");
+      displayError(signupName, "Name is good to go", "success-text");
     } else {
       signupName.classList.remove("success");
       signupName.classList.add("error");
+      displayError(
+        signupName,
+        "Name should be less 30 and more than 2",
+        "error-text"
+      );
     }
+
+    // end of function
   };
 
   submitForm.addEventListener("click", checkInputs);
