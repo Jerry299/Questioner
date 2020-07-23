@@ -95,7 +95,7 @@
                   id="login-password"
                   placeholder="Enter Password here...."
                 />
-                <small class="login-Err">Err Mes</small>
+                <small class="success-text">Err Mes</small>
               </div>
               <button id="submit-btn">Log In</button>
             </div>
@@ -113,45 +113,55 @@
             </h2>
             <div class="form-body">
               <div class="form-group">
-                <label for="email">Name: </label>
+                <label for="name">Name: </label>
                 <input
                   type="text"
+                  autocomplete="name"
                   name="name"
                   id="signup-name"
                   placeholder="Enter Your Name here...."
                 />
-                <small class="signUp-Err">Err Mes</small>
+                <small class="signUp-Err success-text" id="name-err-signup"
+                  >Err Mes</small
+                >
               </div>
               <div class="form-group">
                 <label for="email">Email: </label>
                 <input
+                  autocomplete="email"
                   type="text"
                   name="email"
                   id="signup-email"
                   placeholder="Enter Your Email here...."
                 />
-                <small class="signUp-Err">Err Mes</small>
+                <small class="signUp-Err" id="email-err-signup"
+                  >incorrect</small
+                >
               </div>
 
               <div class="form-group">
-                <label for="email">Password: </label>
+                <label for="password">Password: </label>
                 <input
                   type="password"
                   name="password"
                   id="signup-password"
                   placeholder="Enter Your Password here...."
                 />
-                <small class="signUp-Err">Err Mes</small>
+                <small class="signUp-Err" id="password-err-signup"
+                  >Err Mes</small
+                >
               </div>
               <div class="form-group">
-                <label for="email">Re-enter Password: </label>
+                <label for="password2">Re-enter Password: </label>
                 <input
                   type="password"
                   name="password2"
                   id="signup-password2"
                   placeholder="Re-Enter Your Name here...."
                 />
-                <small class="signUp-Err">Err Mes</small>
+                <small class="signUp-Err" id="password2-err-signup"
+                  >Err Mes</small
+                >
               </div>
               <button id="submit-btn2">Sign Up</button>
             </div>
@@ -247,6 +257,6 @@
         </div>
       </section>
     </div>
-    <script src="/src/popup.js"></script>
+    <script type="module" src="/src/scripts/app.js"></script>
   </body>
 </html>
