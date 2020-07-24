@@ -63,7 +63,7 @@ const validateSignup = () => {
   // checkInput Func
   const checkInputs = () => {
     const nameRegex = /^[a-zA-Z ]{2,20}$/;
-    const emailRegex = /[\w -]+@([\w -] +\.)+[\w -]+/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     // get their values
     const name = signupName.value.trim();
     const email = signupEmail.value.trim();
@@ -92,7 +92,16 @@ const validateSignup = () => {
         "error-text"
       );
     }
-
+    console.log(emailRegex.test(email));
+    if (emailRegex.test(email)) {
+      signupEmail.classList.remove("error");
+      signupEmail.classList.add("success");
+      displayError(signupEmail, "Valid Email", "success-text");
+    } else {
+      signupEmail.classList.remove("success");
+      signupEmail.classList.add("error");
+      displayError(signupEmail, "Invalid Email", "error-text");
+    }
     // end of function
   };
 
