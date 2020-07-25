@@ -851,6 +851,9 @@ input[type="password"] {
   background-repeat: no-repeat;
   padding-left: 40px;
 }
+input:focus {
+  background: rgb(153, 153, 202);
+}
 
 ::placeholder {
   color: rgba(3, 9, 14, 0.8);

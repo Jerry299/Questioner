@@ -62,7 +62,7 @@ const validateSignup = () => {
 
   // checkInput Func
   const checkInputs = () => {
-    const nameRegex = /^[a-zA-Z ]{2,20}$/;
+    const nameRegex = /^[a-zA-Z ]{4,20}$/;
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     // get their values
     const name = signupName.value.trim();
@@ -92,7 +92,7 @@ const validateSignup = () => {
         "error-text"
       );
     }
-    console.log(emailRegex.test(email));
+
     if (emailRegex.test(email)) {
       signupEmail.classList.remove("error");
       signupEmail.classList.add("success");
@@ -102,11 +102,31 @@ const validateSignup = () => {
       signupEmail.classList.add("error");
       displayError(signupEmail, "Invalid Email", "error-text");
     }
+    const passwordRegex = /^[A-Za-z]\w{7,14}$/;
+
+    if (password === password2 && passwordRegex.test(password)) {
+      signupPassword.classList.remove("error");
+      signupPassword.classList.add("success");
+      signupPassword2.classList.remove("error");
+      signupPassword2.classList.add("success");
+      displayError(signupPassword, "Valid Password", "success-text");
+      displayError(signupPassword2, "Password Matched", "success-text");
+    } else {
+      signupPassword.classList.remove("success");
+      signupPassword.classList.add("error");
+      signupPassword2.classList.remove("success");
+      signupPassword2.classList.add("error");
+      displayError(signupPassword, "Invalid Password", "error-text");
+      displayError(signupPassword2, "Password Do not Match", "error-text");
+    }
     // end of function
   };
 
   submitForm.addEventListener("click", checkInputs);
 };
+
+// validate log in
+const validateLogin = () => {};
 
 const app = () => {
   modalFunction();
