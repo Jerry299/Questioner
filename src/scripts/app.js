@@ -5,7 +5,7 @@ const modalFunction = () => {
   const closeBtn = document.getElementById("closebtn");
   const closeBtn2 = document.getElementById("closebtn2");
   const signUpModal = document.getElementById("signup-modal");
-  const signUpBtn = document.getElementById("signUp");
+  const signUpBtn = document.querySelectorAll(".signUp");
 
   // define openModal
   const openModal = () => {
@@ -20,8 +20,11 @@ const modalFunction = () => {
   const closeSignUpModal = () => {
     signUpModal.style.display = "none";
   };
+  for (let i = 0; i < signUpBtn.length; i++) {
+    signUpBtn[i].addEventListener("click", openSignUpModal);
+  }
 
-  signUpBtn.addEventListener("click", openSignUpModal);
+  // signUpBtn.addEventListener("click", openSignUpModal);
   // signUpBtn.addEventListener("click", closeSignUpModal);
   login.addEventListener("click", openModal);
   closeBtn.addEventListener("click", closeModal);
@@ -61,7 +64,8 @@ const validateSignup = () => {
   const submitForm = document.getElementById("submit-btn2");
 
   // checkInput Func
-  const checkInputs = () => {
+  const checkInputs = (evt) => {
+    evt.preventDefault();
     const nameRegex = /^[a-zA-Z ]{4,20}$/;
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     // get their values
@@ -128,10 +132,24 @@ const validateSignup = () => {
 // validate log in
 const validateLogin = () => {};
 
+// send data to the server
+const signUpPostData = () => {
+  const submitForm = document.getElementById("submit-btn2");
+
+  submitForm.addEventListener("click", () => {
+    const name = document.getElementById("signup-name").value;
+    const email = document.getElementById("signup-email").value;
+    const password = document.getElementById("signup-password").value;
+    console.log(name, email, password);
+  });
+};
+
+// function app is the parent function
 const app = () => {
   modalFunction();
   togglerFunction();
   validateSignup();
+  signUpPostData();
 };
 
 app();

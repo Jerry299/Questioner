@@ -33,7 +33,7 @@
           <div class="nav-link" id="log-In">
             <p>Log In</p>
           </div>
-          <div class="nav-link" id="signUp">
+          <div class="nav-link signUp" id="signUp">
             <p>Sign Up</p>
           </div>
         </div>
@@ -61,7 +61,9 @@
               to solve it,by gathering questions from people who will attend a
               Meet-Up according to votes
             </p>
-            <button class="btn btn-all" id="ask">Ask Now!!</button>
+            <button class="btn btn-all signUp" id="ask">
+              Ask Now!!
+            </button>
           </div>
 
           <div class="illustration"></div>
@@ -111,7 +113,7 @@
             <h2 class="form-header" style="text-align: center; color: #c70039;">
               Sign Up
             </h2>
-            <div class="form-body">
+            <form class="form-body">
               <div class="form-group">
                 <label for="name">Name: </label>
                 <input
@@ -156,7 +158,8 @@
                 <small class="signUp-Err" id="password2-err-signup"></small>
               </div>
               <button id="submit-btn2">Sign Up</button>
-            </div>
+              <small class="signUp-Err" id="server-error"></small>
+            </form>
           </div>
         </div>
       </div>

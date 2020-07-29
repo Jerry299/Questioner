@@ -17,6 +17,12 @@
     "no-param-reassign": "warn",
     "no-console": "off",
     "no-unused-vars": "warn",
-    "no-useless-escape": "warn"
+    "no-useless-escape": "warn",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ]
   }
 }
